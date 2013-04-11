@@ -23,15 +23,6 @@
 ;;undo tree mode
 (add-hook 'after-init-hook 'global-undo-tree-mode)
 
-;;hasekll mode
-(load "~/.emacs.d/haskell-mode/haskell-site-file")
-(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
-(add-hook 'haskell-mode-hook 'font-lock-mode)
-(put 'upcase-region 'disabled nil)
-
 ;;having some trouble with fonts in terminal, choose a monospaced
 (if (equal (display-graphic-p) 'false) (set-default-font "Inconsolata-12")
 )
