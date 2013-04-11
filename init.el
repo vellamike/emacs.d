@@ -69,7 +69,7 @@
 
 ;select color theme
 (color-theme-initialize)
-(color-theme-deep-blue)
+(color-theme-solarized-dark)
 
 ;;Some stuff I'm not currently using but would like to keep here for reference:
 
