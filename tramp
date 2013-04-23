@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <13/02/05 04:33:20 /home/mike/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <13/04/12 00:37:43 /home/mike/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -15,4 +15,32 @@
   ("uid-integer" 0)
   ("stat" "\\stat")
   ("gid-integer" 0)
-  ("readlink" "\\readlink")))
+  ("readlink" "\\readlink"))
+ (["ssh" "mike" "pdn" nil]
+  ("uname" "Linux 3.2.0-40-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("~" "/home/mike")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" "\\stat")
+  ("file-exists" "test -e")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1000)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("readlink" "\\readlink")
+  ("local-encoding" base64-encode-region)
+  ("local-decoding" base64-decode-region)
+  ("remote-encoding" "base64")
+  ("remote-decoding" "base64 -d -i")
+  ("inline-compress" "gzip")
+  ("inline-decompress" "gzip -d")
+  ("gid-string" "mike")
+  ("tmpdir" "/ssh:mike@pdn:/tmp"))
+ (["ssh1" "mike" "pdn" nil]
+  nil))
