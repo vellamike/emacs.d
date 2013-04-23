@@ -41,6 +41,20 @@
 ;;get python indentation right: - MV temporarily canceled this to see what effect would be
 ;;(add-hook 'python-mode-hook '(lambda () (define-key python-mode-map "\C-m" 'ne;;wline-and-indent)))
 
+(setq
+ python-shell-interpreter "ipython"
+ python-shell-interpreter-args ""
+ python-shell-prompt-regexp "In \\[[0-9]+\\]: "
+ python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
+ python-shell-completion-setup-code
+   "from IPython.core.completerlib import module_completion"
+ python-shell-completion-module-string-code
+   "';'.join(module_completion('''%s'''))\n"
+ python-shell-completion-string-code
+   "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
+
+
+
 ;; enable yasnippet
 (add-to-list 'load-path
               "~/.emacs.d/yasnippet") (require 'yasnippet) 
@@ -70,6 +84,15 @@
 ;select color theme
 (color-theme-initialize)
 (color-theme-solarized-dark)
+
+
+;Playing around with gnus:
+
+(setq gnus-select-method '(nnimap "gmail"
+				  (nnimap-address "imap.gmail.com")
+				  (nnimap-server-port 993)
+				  (nnimap-stream ssl)))
+
 
 ;;Some stuff I'm not currently using but would like to keep here for reference:
 
