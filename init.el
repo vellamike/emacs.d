@@ -64,16 +64,25 @@
 (add-hook 'suspend-hook 'do-auto-save)
 
 
-(when (display-graphic-p)
-  (defun toggle-fullscreen ()
-    (interactive)
-    (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-			   '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
-    (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-			   '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
-    )
-(toggle-fullscreen)
+(defun toggle-fullscreen ()
+  (interactive)
+  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
+  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
 )
+(toggle-fullscreen)
+
+;(when (display-graphic-p)
+;  (defun toggle-fullscreen ()
+;    (interactive)
+;    (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+;			   '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
+;    (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+;			   '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
+;    )
+;(toggle-fullscreen)
+;)
 
 ;package requirement
 (require 'package)
@@ -93,7 +102,7 @@
 				  (nnimap-server-port 993)
 				  (nnimap-stream ssl)))
 
-
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 ;;Some stuff I'm not currently using but would like to keep here for reference:
 
 ;(require 'color-theme)
