@@ -1,3 +1,6 @@
-elpa/archives/*
+elpa/*
+backups/*
+places/*
 session*
-auto-save-list
+auto-save-listplaces
+places
