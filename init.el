@@ -53,7 +53,7 @@
 
 (add-hook 'after-init-hook 'global-undo-tree-mode) ;;undo-tree mode
 
-;;having some trouble with fonts in terminal, choose a monospaced
+;;monospaced 
 (if (equal (display-graphic-p) 'false) (set-default-font "Inconsolata-12")
 )
 
@@ -64,10 +64,12 @@
 (ac-config-default)
 (global-auto-complete-mode t)
 
-;;python
-(add-to-list 'load-path "~/.emacs.d/pymacs") ;;mv experiment
-(pymacs-load "ropemacs" "rope-")
-(setq ropemacs-enable-autoimport t)
+;;python -disablinng these first three lines as I suspect they don't
+;;help much
+;(add-to-list 'load-path "~/.emacs.d/pymacs") ;;mv experiment
+;(pymacs-load "ropemacs" "rope-")
+;(setq ropemacs-enable-autoimport t)
+
 (setq
  python-shell-interpreter "ipython"
  python-shell-interpreter-args ""
@@ -96,7 +98,8 @@
   (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
 	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
 )
-(toggle-fullscreen)
+
+(if (eq window-system 'X) (toggle-fullscreen))
 
 ;;select color theme
 (color-theme-initialize)

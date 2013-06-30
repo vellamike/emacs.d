@@ -1,482 +1,592 @@
-((("ropemacs" .
-   [1 0 0 0 0 0 0 0])
-  ("vellamike" .
-   [0 0 0 0 0 0 0 0 1])
-  ("plt2" .
+((("File" .
    [1 0 0 0])
-  ("arange" .
-   [1 0 0 0 0 0])
-  ("type" .
-   [3 0 0 0])
-  ("array" .
-   [5 0 1 0 0])
-  ("025" .
+  ("h5py" .
+   [2 0 0 0])
+  ("load" .
+   [1 0 0 0])
+  ("ArrayMorphLoader" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("pop" .
    [1 0 0])
-  ("vectors_dict" .
-   [0 0 0 0 0 0 0 1 2 0 0 0])
-  ("vec" .
-   [2 0 0])
-  ("calcium_level" .
-   [0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("opening" .
-   [5 0 0 0 0 0 0])
-  ("addition" .
-   [0 0 0 0 0 0 1 0])
-  ("asy" .
-   [1 0 0])
-  ("vector" .
-   [1 0 0 1 2 0])
-  ("package-initialize" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("package--dir" .
-   [0 0 0 0 0 1 0 0 0 0 0 0])
-  ("color-theme" .
-   [0 0 0 0 0 0 1 0 0 0 0])
-  ("custom-set-variables" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("passive" .
-   [1 0 0 0 0 0 0])
-  ("500" .
-   [2 0 0])
-  ("diameter" .
-   [0 0 0 1 0 0 0 0])
-  ("LeakCurrent" .
-   [0 0 1 0 0 0 0 0 0 0 0])
-  ("kinetics" .
-   [0 0 0 1 0 0 0 0])
-  ("leak" .
-   [0 0 0 1])
-  ("TestCase" .
-   [0 0 0 1 0 0 0 0])
-  ("unittest" .
-   [0 0 0 0 0 1 0 0])
-  ("test_distal_diameter" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("distal" .
-   [9 0 1 1 1 1])
-  ("proximal_point" .
-   [0 0 0 0 0 0 0 0 0 0 2 0 0 1])
-  ("Point3DWithDiam" .
-   [1 0 0 1 0 1 0 0 0 0 0 0 0 0 0])
-  ("proximal_diameter" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("proximal" .
-   [4 0 0 0 0 4 0 1])
-  ("neuroml" .
-   [1 0 0 1 0 4 0])
-  ("Segment" .
-   [1 0 0 0 0 0 0])
-  ("segment" .
-   [2 0 0 0 1 0 0])
-  ("add_segment" .
+  ("new_connectivity" .
+   [0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0])
+  ("array_equal" .
    [0 0 0 0 0 0 0 0 1 0 0])
-  ("new_morphology" .
-   [0 0 0 0 0 0 3 0 0 0 0 0 0 0])
-  ("a" .
-   [1])
-  ("s" .
-   [2])
-  ("add" .
-   [1 0 0])
-  ("newmorphology" .
-   [0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("add_cell" .
-   [0 0 1 0 0 0 0 0])
-  ("nml" .
-   [6 0 0])
-  ("n" .
-   [2])
-  ("morphology" .
-   [0 0 0 0 1 0 0 0 1 0])
-  ("id" .
-   [4 0])
-  ("segments" .
-   [1 0 0 0 0 0 0 0])
-  ("mycell" .
-   [2 0 0 0 0 0])
-  ("newcell" .
-   [1 0 0 2 0 0 0])
-  ("d" .
-   [3])
-  ("cells" .
+  ("new" .
+   [2 0 0])
+  ("to_root" .
+   [1 0 0 0 0 0 1])
+  ("tests" .
    [1 0 0 0 0])
-  ("nml_attribute" .
-   [0 0 0 2 0 0 0 0 0 0 0 0 0])
-  ("not" .
-   [0 0 1])
-  ("replacewithsillyness" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("returnanum" .
-   [0 0 0 0 0 0 0 1 0 0])
-  ("timesnumericalbytwo" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("afn" .
-   [6 0 0])
-  ("printhelloworld" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("sillydecor" .
+  ("Add" .
+   [1 0 0])
+  ("TODO" .
+   [2 0 0 0])
+  ("children" .
+   [1 0 0 0 0 0 0 0])
+  ("assertTrue" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("np" .
+   [4 0])
+  ("physical_indices" .
+   [1 0 0 0 0 0 0 0 0 0 4 0 0 0 0 0])
+  ("physical" .
+   [0 0 0 0 2 0 1 0])
+  ("root_index" .
    [0 0 0 0 0 0 1 0 0 0])
-  ("princ" .
+  ("all_nodes_satisfied" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("all_vertices_present" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("false" .
    [1 0 0 0 0])
-  ("lambda" .
-   [1 0 0 0 0 0])
-  ("requester_levels" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("requester" .
-   [0 0 0 0 1 0 0 0 0])
-  ("parsed_data" .
-   [0 0 0 0 0 0 1 1 1 1 0])
-  ("chosen" .
-   [1 0 0 0 0 0])
-  ("fitness_increment" .
-   [0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0])
-  ("increment" .
+  ("writer_method" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("writers" .
+   [2 0 0 0 0 0 0])
+  ("NameTable" .
    [1 0 0 0 0 0 0 0 0])
-  ("requester_level" .
-   [0 0 0 0 0 0 0 0 0 0 0 2 0 0 0])
-  ("abs" .
-   [4 0 0])
-  ("levels" .
-   [1 0 0 0 0 0])
-  ("fitness" .
-   [1 0 0 0 0 0 0])
-  ("BSSIDs" .
-   [6 0 0 0 0 0])
-  ("BSSID_levels" .
-   [4 0 0 0 0 0 0 0 0 1 0 1])
-  ("index" .
-   [2 0 0 0 0])
-  ("fitnessincrement" .
-   [0 0 0 2 2 0 0 0 0 0 0 0 0 0 0 0])
-  ("float" .
-   [3 0 0 0 0])
-  ("location_fitness_dict" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 2 0])
-  ("location_fitness" .
-   [0 0 0 0 0 0 0 0 0 0 0 2 1 0 0 0])
-  ("len" .
-   [2 0 0])
-  ("locations_fitness" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("BSSIDS" .
+  ("pluralize" .
+   [1 0 0 0 0 0 0 0 0])
+  ("string" .
    [2 0 0 0 0 0])
-  ("location" .
-   [11 0 0 0 0 0 0 0])
-  ("hash_tables" .
+  ("renamed_attribute" .
+   [0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0])
+  ("pluralize_flag" .
+   [0 0 0 0 1 1 0 0 0 0 0 0 0 0])
+  ("attrib" .
+   [1 0 0 0 0 0])
+  ("node" .
+   [1 0 0 0])
+  ("tag" .
+   [1 0 0])
+  ("remove_curlies" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("get_timeseries" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("get" .
+   [1 0 0])
+  ("loader" .
+   [1 0 0 0 0 1])
+  ("write" .
+   [0 0 1 0 0])
+  ("document" .
+   [0 0 0 0 1 0 0 0])
+  ("set_title" .
+   [0 0 0 0 0 1 0 0 0])
+  ("visualization_run" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("color-theme-deep-blue" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("require" .
+   [2 0 0 0 1 0 0])
+  ("color-theme-initialize" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0])
+  ("duration" .
+   [0 0 0 0 1 0 0 0])
+  ("intracellular_properties" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("IntracellularProperties" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("membrane_properties" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0])
+  ("MembraneProperties" .
+   [0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("file_path" .
+   [0 0 0 0 0 1 0 0 0])
+  ("src" .
+   [3 0 0])
+  ("cls" .
+   [2 0 0])
+  ("classmethod" .
    [0 0 0 0 0 0 1 0 0 0 0])
-  ("level" .
-   [15 0 0 0 1])
-  ("BSSID" .
-   [12 0 0 0 0])
-  ("findtext" .
-   [0 0 0 0 0 1 0 0])
-  ("BSSID_signal_intensity_dict" .
-   [0 0 0 1 0 0 0 0 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("BSSID_dict" .
-   [0 0 0 3 1 7 3 0 0 0])
-  ("set" .
-   [2 0 0])
-  ("location_names" .
-   [6 0 0 0 0 0 0 0 5 0 0 0 0 0])
-  ("scan_results" .
-   [8 0 0 0 0 0 0 0 0 0 0 0])
-  ("in" .
-   [3 0])
-  ("scan_result" .
-   [0 0 0 0 6 3 0 3 0 0 0])
-  ("rootElement" .
-   [1 0 0 0 0 0 0 1 0 0 0])
-  ("bookList" .
-   [1 0 0 0 0 0 0 0])
-  ("parse" .
-   [4 0 0 0 0])
-  ("xml" .
-   [1 0 0])
-  ("xmlTag" .
-   [0 0 0 0 1 0])
-  ("open" .
-   [3 0 0 0])
-  ("where_am_i" .
-   [0 0 0 0 1 1 0 0 1 0])
-  ("locations" .
-   [9 0 0 0 0 0 0 0 0])
-  ("get_locations" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("minidom" .
-   [1 0 0 0 0 0 0])
-  ("replace" .
-   [1 0 0 0 0 0 0])
-  ("signaldict" .
-   [8 0 0 0 0 0 0 1 0 0])
-  ("values" .
-   [4 0 0 0 0 0])
-  ("keys" .
-   [6 0 0 0])
-  ("zip" .
-   [2 0 0])
-  ("tolist" .
-   [10 0 0 0 0 1])
-  ("signalsinfo" .
-   [0 0 0 0 1 1 0 1 0 0 0])
-  ("pass" .
-   [2 0 0 0])
-  ("log_stuff" .
-   [0 0 0 0 1 0 0 0 0])
-  ("pow" .
-   [1 0 0])
-  ("power" .
-   [1 0 0 0 0])
-  ("adrian" .
-   [2 0 0 0 0 0])
-  ("alias" .
-   [3 0 0 0 0])
-  ("slowing_factor" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("with" .
-   [1 0 0 0])
-  ("home" .
-   [1 0 0 0])
-  ("ca_pump" .
-   [1 0 0 0 0 0 0])
-  ("100" .
-   [8 0 0])
-  ("MooseEnv" .
-   [0 0 1 0 0 0 0 0])
-  ("def" .
-   [18 0 1])
-  ("str" .
-   [3 0 1])
-  ("stdrun" .
-   [0 0 1 0 0 0])
-  ("show" .
-   [3 0 0 1])
-  ("MooseSimulation" .
-   [0 0 0 2 0 0 0 0 0 0 0 0 0 0 0])
-  ("NeuroML" .
-   [0 0 0 1 0 0 0])
-  ("NeuronEnv" .
-   [0 0 0 0 0 0 1 0 0])
-  ("import" .
-   [14 0 0 0 1 0])
-  ("numpy" .
-   [10 0 0 3 1])
-  ("repr" .
-   [0 0 1 0])
-  ("class" .
-   [3 0 0 0 0])
-  ("self" .
-   [9 0 0 0])
-  ("init" .
-   [1 0 0 0])
-  ("__init__" .
-   [0 0 0 1 0 0 0 0])
-  ("test" .
-   [1 0 0 0])
-  ("object" .
-   [0 0 1 1 0 0])
-  ("print" .
-   [77 0 0 0 0])
-  ("as" .
-   [4 0])
-  ("text" .
-   [0 0 0 1])
-  ("matplotlib" .
-   [1 0 0 2 1 2 0 0 0 0])
-  ("1e" .
-   [5 0])
-  ("sim_time" .
-   [2 0 0 0 0 0 0 0])
-  ("env" .
-   [3 0 0])
-  ("run_simulation" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("show_simulation" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("recording_compartment" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("None" .
-   [1 0 0 0])
-  ("compartments" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("1000" .
-   [7 0 0 0])
-  ("elif" .
-   [1 0 1 0])
-  ("component" .
-   [1 0 0 0 0 0 0 0 0])
-  ("name" .
-   [2 0 0 0])
-  ("raise" .
-   [1 0 0 0 0])
-  ("NotImplementedError" .
-   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("dt" .
-   [3 0])
-  ("sec" .
-   [1 0 0])
-  ("Insert" .
-   [0 0 0 0 1 0])
-  ("insert" .
+  ("parse_signalstring" .
+   [0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("todict" .
+   [0 0 0 0 0 1])
+  ("split" .
+   [0 0 0 0 1])
+  ("signals_list" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("signal_dict" .
+   [0 0 0 0 0 0 0 0 0 1 0])
+  ("signal_dict_list" .
+   [1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0])
+  ("signal" .
    [1 0 0 0 0 0])
-  ("section" .
-   [3 0 0 0 0 0 0])
-  ("pas" .
-   [2 0 0])
-  ("cell" .
-   [4 0 0 0])
-  ("passive_properties" .
-   [0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0])
-  ("rm" .
-   [2 0])
-  ("for" .
-   [13 0 0])
-  ("seg" .
-   [4 0 0])
-  ("leak_current" .
-   [0 0 0 0 0 0 0 0 0 1 0 0])
-  ("1e6" .
-   [1 0 0])
-  ("5e9" .
-   [4 0 0])
-  ("1e3" .
-   [1 0 0])
-  ("current" .
-   [3 0 0 0 3 0 0])
-  ("current_clamp" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("delay" .
-   [1 0 0 0 1])
-  ("10" .
-   [3 0])
-  ("sim" .
-   [3 0 0])
-  ("rec_v" .
+  ("append" .
+   [4 0 0 0 0 0])
+  ("range" .
    [2 0 0 0 0])
-  ("moose" .
-   [1 0 0 0 0])
-  ("neuron_env" .
-   [0 0 0 0 0 0 0 1 0 0])
-  ("pyplot" .
-   [1 0 2 0 0 1])
-  ("plot" .
-   [3 0 0 0])
-  ("from" .
-   [3 0 0 0])
-  ("plt" .
-   [3 0 0])
-  ("k_fast" .
-   [2 0 0 0 0 0])
-  ("k_slow" .
-   [4 0 0 0 0 0])
-  ("//bin/" .
-   [0 0 1 0 0 0])
-  ("do_plot" .
-   [0 0 1 1 0 0 0])
-  ("true" .
-   [1 0 0 0])
-  ("list" .
-   [4 0 0 0])
-  ("analysis" .
-   [1 0 0 0 0 0 0 0])
-  ("analysis_results" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("50" .
-   [2 0])
-  ("25" .
-   [2 0])
-  ("70" .
-   [3 0])
-  ("environment" .
-   [1 0 0 0 0 2 0 0 0 0 0])
-  ("if" .
-   [3 0])
-  ("neuron" .
+  ("indent" .
    [1 0 0 0 0 0])
-  ("export" .
-   [2 0 0 0 0 1])
-  ("htop" .
-   [1 0 0 0])
-  ("5489" .
+  ("toxml" .
+   [1 0 0 0 0])
+  ("doc" .
+   [11 0 0])
+  ("structure" .
+   [0 0 0 0 0 0 0 1 0])
+  ("root" .
+   [2 0 0 0])
+  ("xmlutils" .
+   [0 0 0 0 1 0 0 0])
+  ("return" .
+   [10 0 0 0 0 0])
+  ("signals_info" .
+   [0 0 0 0 5 2 0 7 0 0 0 0])
+  ("dict" .
+   [3 0 0 0])
+  ("location_name" .
+   [2 0 1 5 2 0 0 0 0 0 2 3 0])
+  ("intensity" .
+   [3 0 0 0 0 0 0 0 0])
+  ("port" .
    [1 0 0 0])
   ("inet_address" .
    [0 0 0 0 0 1 0 0 0 0 0 0])
-  ("port" .
+  ("5489" .
    [1 0 0 0])
-  ("intensity" .
-   [3 0 0 0 0 0 0 0 0])
-  ("location_name" .
-   [2 0 1 5 2 0 0 0 0 0 2 3 0])
-  ("dict" .
-   [3 0 0 0])
-  ("signals_info" .
-   [0 0 0 0 5 2 0 7 0 0 0 0])
-  ("return" .
-   [10 0 0 0 0 0])
-  ("xmlutils" .
-   [0 0 0 0 1 0 0 0])
-  ("root" .
+  ("htop" .
    [1 0 0 0])
-  ("structure" .
-   [0 0 0 0 0 0 0 1 0])
-  ("doc" .
-   [9 0 0])
-  ("toxml" .
-   [1 0 0 0 0])
-  ("indent" .
+  ("export" .
+   [2 0 0 0 0 1])
+  ("neuron" .
    [1 0 0 0 0 0])
-  ("range" .
-   [2 0 0 0 0])
-  ("append" .
+  ("if" .
+   [3 0])
+  ("environment" .
+   [1 0 0 0 0 2 0 0 0 0 0])
+  ("70" .
+   [3 0])
+  ("25" .
+   [2 0])
+  ("50" .
+   [2 0])
+  ("analysis_results" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("analysis" .
+   [1 0 0 0 0 0 0 0])
+  ("list" .
+   [4 0 0 0])
+  ("true" .
+   [1 0 0 0])
+  ("do_plot" .
+   [0 0 1 1 0 0 0])
+  ("//bin/" .
+   [0 0 1 0 0 0])
+  ("k_slow" .
    [4 0 0 0 0 0])
-  ("signal" .
+  ("k_fast" .
+   [2 0 0 0 0 0])
+  ("plt" .
+   [3 0 0])
+  ("from" .
+   [3 0 0 0])
+  ("plot" .
+   [3 0 0 0])
+  ("pyplot" .
+   [1 0 2 0 0 1])
+  ("neuron_env" .
+   [0 0 0 0 0 0 0 1 0 0])
+  ("moose" .
+   [1 0 0 0 0])
+  ("rec_v" .
+   [2 0 0 0 0])
+  ("sim" .
+   [3 0 0])
+  ("10" .
+   [3 0])
+  ("delay" .
+   [1 0 0 0 1])
+  ("current_clamp" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("current" .
+   [3 0 0 0 3 0 0])
+  ("1e3" .
+   [1 0 0])
+  ("5e9" .
+   [4 0 0])
+  ("1e6" .
+   [1 0 0])
+  ("leak_current" .
+   [0 0 0 0 0 0 0 0 0 1 0 0])
+  ("seg" .
+   [4 0 0])
+  ("for" .
+   [13 0 0])
+  ("rm" .
+   [2 0])
+  ("passive_properties" .
+   [0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0])
+  ("cell" .
+   [4 0 0 0])
+  ("pas" .
+   [2 0 0])
+  ("section" .
+   [3 0 0 0 0 0 0])
+  ("insert" .
    [1 0 0 0 0 0])
-  ("signal_dict_list" .
-   [1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0])
-  ("signal_dict" .
-   [0 0 0 0 0 0 0 0 0 1 0])
-  ("signals_list" .
-   [2 0 0 0 0 0 0 0 0 0 0 0])
-  ("split" .
-   [0 0 0 0 1])
-  ("todict" .
-   [0 0 0 0 0 1])
-  ("parse_signalstring" .
-   [0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("classmethod" .
+  ("Insert" .
+   [0 0 0 0 1 0])
+  ("sec" .
+   [1 0 0])
+  ("dt" .
+   [3 0])
+  ("NotImplementedError" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("raise" .
+   [1 0 0 0 0])
+  ("name" .
+   [2 0 0 0])
+  ("component" .
+   [1 0 0 0 0 0 0 0 0])
+  ("elif" .
+   [1 0 1 0])
+  ("1000" .
+   [7 0 0 0])
+  ("compartments" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("None" .
+   [1 0 0 0])
+  ("recording_compartment" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("show_simulation" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("run_simulation" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("env" .
+   [3 0 0])
+  ("sim_time" .
+   [2 0 0 0 0 0 0 0])
+  ("1e" .
+   [5 0])
+  ("matplotlib" .
+   [1 0 0 2 1 2 0 0 0 0])
+  ("text" .
+   [0 0 0 1])
+  ("as" .
+   [4 0])
+  ("print" .
+   [77 0 0 0 0])
+  ("object" .
+   [0 0 1 1 0 1])
+  ("test" .
+   [1 0 0 0])
+  ("__init__" .
+   [0 0 0 1 0 0 0 0])
+  ("init" .
+   [1 0 0 0])
+  ("self" .
+   [41 0 0 0])
+  ("class" .
+   [3 0 0 0 0])
+  ("repr" .
+   [0 0 1 0])
+  ("numpy" .
+   [11 0 0 3 1])
+  ("import" .
+   [14 0 0 0 2 0])
+  ("NeuronEnv" .
+   [0 0 0 0 0 0 1 0 0])
+  ("NeuroML" .
+   [0 0 0 1 0 0 0])
+  ("MooseSimulation" .
+   [0 0 0 2 0 0 0 0 0 0 0 0 0 0 0])
+  ("show" .
+   [3 0 0 1])
+  ("stdrun" .
+   [0 0 1 0 0 0])
+  ("str" .
+   [3 0 1])
+  ("def" .
+   [18 0 1])
+  ("MooseEnv" .
+   [0 0 1 0 0 0 0 0])
+  ("100" .
+   [8 0 0])
+  ("ca_pump" .
+   [1 0 0 0 0 0 0])
+  ("home" .
+   [1 0 0 0])
+  ("with" .
+   [1 0 0 0])
+  ("slowing_factor" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("alias" .
+   [3 0 0 0 0])
+  ("adrian" .
+   [2 0 0 0 0 0])
+  ("power" .
+   [1 0 0 0 0])
+  ("pow" .
+   [1 0 0])
+  ("log_stuff" .
+   [0 0 0 0 1 0 0 0 0])
+  ("pass" .
+   [2 0 0 0])
+  ("signalsinfo" .
+   [0 0 0 0 1 1 0 1 0 0 0])
+  ("tolist" .
+   [10 0 0 0 0 1])
+  ("zip" .
+   [2 0 0])
+  ("keys" .
+   [6 0 0 0])
+  ("values" .
+   [4 0 0 0 0 0])
+  ("signaldict" .
+   [8 0 0 0 0 0 0 1 0 0])
+  ("replace" .
+   [1 0 0 0 0 0 0])
+  ("minidom" .
+   [1 0 0 0 0 0 0])
+  ("get_locations" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("locations" .
+   [9 0 0 0 0 0 0 0 0])
+  ("where_am_i" .
+   [0 0 0 0 1 1 0 0 1 0])
+  ("open" .
+   [3 0 0 0])
+  ("xmlTag" .
+   [0 0 0 0 1 0])
+  ("xml" .
+   [1 0 0])
+  ("parse" .
+   [4 0 0 0 0])
+  ("bookList" .
+   [1 0 0 0 0 0 0 0])
+  ("rootElement" .
+   [1 0 0 0 0 0 0 1 0 0 0])
+  ("scan_result" .
+   [0 0 0 0 6 3 0 3 0 0 0])
+  ("in" .
+   [3 0])
+  ("scan_results" .
+   [8 0 0 0 0 0 0 0 0 0 0 0])
+  ("location_names" .
+   [6 0 0 0 0 0 0 0 5 0 0 0 0 0])
+  ("set" .
+   [2 0 0])
+  ("BSSID_dict" .
+   [0 0 0 3 1 7 3 0 0 0])
+  ("BSSID_signal_intensity_dict" .
+   [0 0 0 1 0 0 0 0 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("findtext" .
+   [0 0 0 0 0 1 0 0])
+  ("BSSID" .
+   [12 0 0 0 0])
+  ("level" .
+   [15 0 0 0 1])
+  ("hash_tables" .
    [0 0 0 0 0 0 1 0 0 0 0])
-  ("cls" .
+  ("location" .
+   [11 0 0 0 0 0 0 0])
+  ("BSSIDS" .
+   [2 0 0 0 0 0])
+  ("locations_fitness" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("len" .
+   [2 0 0])
+  ("location_fitness" .
+   [0 0 0 0 0 0 0 0 0 0 0 2 1 0 0 0])
+  ("location_fitness_dict" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 2 0])
+  ("float" .
+   [3 0 0 0 0])
+  ("fitnessincrement" .
+   [0 0 0 2 2 0 0 0 0 0 0 0 0 0 0 0])
+  ("index" .
+   [3 0 0 0 0])
+  ("BSSID_levels" .
+   [4 0 0 0 0 0 0 0 0 1 0 1])
+  ("BSSIDs" .
+   [6 0 0 0 0 0])
+  ("fitness" .
+   [1 0 0 0 0 0 0])
+  ("levels" .
+   [1 0 0 0 0 0])
+  ("abs" .
+   [4 0 0])
+  ("requester_level" .
+   [0 0 0 0 0 0 0 0 0 0 0 2 0 0 0])
+  ("increment" .
+   [1 0 0 0 0 0 0 0 0])
+  ("fitness_increment" .
+   [0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0])
+  ("chosen" .
+   [1 0 0 0 0 0])
+  ("parsed_data" .
+   [0 0 0 0 0 0 1 1 1 1 0])
+  ("requester" .
+   [0 0 0 0 1 0 0 0 0])
+  ("requester_levels" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("lambda" .
+   [1 0 0 0 0 0])
+  ("princ" .
+   [1 0 0 0 0])
+  ("sillydecor" .
+   [0 0 0 0 0 0 1 0 0 0])
+  ("printhelloworld" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("afn" .
+   [6 0 0])
+  ("timesnumericalbytwo" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("returnanum" .
+   [0 0 0 0 0 0 0 1 0 0])
+  ("replacewithsillyness" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("not" .
+   [0 0 1])
+  ("nml_attribute" .
+   [0 0 0 2 1 0 0 0 0 0 0 0 0])
+  ("cells" .
+   [1 0 0 0 0])
+  ("d" .
+   [3])
+  ("newcell" .
+   [1 0 0 2 0 0 0])
+  ("mycell" .
+   [2 0 0 0 0 0])
+  ("segments" .
+   [1 0 0 0 0 0 0 0])
+  ("id" .
+   [4 0])
+  ("morphology" .
+   [0 0 0 0 1 0 1 0 1 0])
+  ("n" .
+   [2])
+  ("nml" .
+   [6 0 0])
+  ("add_cell" .
+   [0 0 1 0 0 0 0 0])
+  ("newmorphology" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("add" .
    [1 0 0])
-  ("src" .
-   [1 0 0])
-  ("file_path" .
-   [0 0 0 0 0 1 0 0 0])
-  ("MembraneProperties" .
-   [0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("membrane_properties" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0])
-  ("IntracellularProperties" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("intracellular_properties" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("duration" .
-   [0 0 0 0 1 0 0 0])
-  ("color-theme-initialize" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0])
-  ("require" .
+  ("s" .
+   [2])
+  ("a" .
+   [1])
+  ("new_morphology" .
+   [0 0 0 0 0 0 3 0 0 1 0 0 0 0])
+  ("add_segment" .
+   [0 0 0 0 0 0 0 0 1 0 0])
+  ("segment" .
    [2 0 0 0 1 0 0])
-  ("color-theme-deep-blue" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("visualization_run" .
-   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("set_title" .
-   [0 0 0 0 0 1 0 0 0])
-  ("document" .
-   [0 0 0 0 1 0 0 0])
-  ("write" .
-   [0 0 1 0 0])
-  ("loader" .
-   [1 0 0 0 0 1])
-  ("get" .
+  ("Segment" .
+   [1 0 0 0 0 0 0])
+  ("neuroml" .
+   [4 0 0 1 0 4 0])
+  ("proximal" .
+   [4 0 0 0 0 4 0 1])
+  ("proximal_diameter" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("Point3DWithDiam" .
+   [1 0 0 1 0 1 0 0 0 0 0 0 0 0 0])
+  ("proximal_point" .
+   [0 0 0 0 0 0 0 0 0 0 2 0 0 1])
+  ("distal" .
+   [9 0 1 1 1 1])
+  ("test_distal_diameter" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("unittest" .
+   [1 0 0 0 1 1 1 0])
+  ("TestCase" .
+   [0 0 1 1 0 0 0 0])
+  ("leak" .
+   [0 0 0 1])
+  ("kinetics" .
+   [0 0 0 1 0 0 0 0])
+  ("LeakCurrent" .
+   [0 0 1 0 0 0 0 0 0 0 0])
+  ("diameter" .
+   [0 0 0 1 0 0 0 0])
+  ("500" .
+   [2 0 0])
+  ("passive" .
+   [1 0 0 0 0 0 0])
+  ("custom-set-variables" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("color-theme" .
+   [0 0 0 0 0 0 1 0 0 0 0])
+  ("package--dir" .
+   [0 0 0 0 0 1 0 0 0 0 0 0])
+  ("package-initialize" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("vector" .
+   [1 0 0 1 2 0])
+  ("asy" .
    [1 0 0])
-  ("get_timeseries" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0])))
+  ("addition" .
+   [0 0 0 0 0 0 1 0])
+  ("opening" .
+   [5 0 0 0 0 0 0])
+  ("calcium_level" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("vec" .
+   [2 0 0])
+  ("vectors_dict" .
+   [0 0 0 0 0 0 0 1 2 0 0 0])
+  ("025" .
+   [1 0 0])
+  ("array" .
+   [5 0 1 1 1])
+  ("type" .
+   [3 0 0 0])
+  ("arange" .
+   [1 0 0 0 0 0])
+  ("plt2" .
+   [1 0 0 0])
+  ("vellamike" .
+   [0 0 0 0 0 0 0 0 1])
+  ("ropemacs" .
+   [1 0 0 0 0 0 0 0])
+  ("variables" .
+   [4 0 0 0 0 0 0 0 0])
+  ("path" .
+   [2 0 0 0])
+  ("os" .
+   [1 0])
+  ("test_file_path" .
+   [0 0 0 0 0 0 1 0 1 1 0 0 0 0])
+  ("unittest2" .
+   [1 0 0 0 0 0 0 0 0])
+  ("except" .
+   [0 0 1 1 0 0])
+  ("ImportError" .
+   [0 0 1 0 0 0 0 0 0 0 0])
+  ("Morphology" .
+   [0 0 0 0 0 1 0 0 0 1])
+  ("vertices" .
+   [2 0 0 0 1 4 0 0])
+  ("connectivity" .
+   [2 0 0 1 0 0 0 0 0 2 0 0])
+  ("assertEqual" .
+   [1 0 0 0 0 0 0 1 1 0 0])
+  ("optimized_morphology" .
+   [0 0 1 4 3 1 2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("length" .
+   [2 0 0 0 0 0])
+  ("num_vertices" .
+   [0 0 0 0 0 0 0 1 0 1 0 0])
+  ("connection" .
+   [0 0 0 0 2 0 0 0 0 0])
+  ("property" .
+   [0 0 0 0 0 0 1 0])
+  ("am" .
+   [2 0])
+  ("valid_morphology" .
+   [0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0])
+  ("shape" .
+   [1 0 0 0 0])
+  ("all_points_satisfied" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("all_vertices" .
+   [2 0 0 0 0 0 1 0 1 0 0 1])
+  ("hello" .
+   [1 0 0 0 0])
+  ("toggle-fullscreen" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])))
