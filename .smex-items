@@ -1,0 +1,53 @@
+
+;; ----- smex-history -----
+(
+ python-mode
+ eval-buffer
+ shell
+ regexp-builder
+ compile
+ dired
+ org-mode
+)
+
+;; ----- smex-data -----
+(
+ (rainbow-mode . 7)
+ (rainbow-delimiters-mode . 3)
+ (ido-ubiquitous . 4)
+ (package-install . 2)
+ (python-mode . 5)
+ (pwd . 1)
+ (5x5 . 1)
+ (smex . 2)
+ (shell . 20)
+ (magit-status . 1)
+ (scheme-mode . 2)
+ (run-scheme . 2)
+ (eval-buffer . 3)
+ (org-export . 2)
+ (org-mode . 7)
+ (color-theme-xp . 5)
+ (color-theme-gnome . 5)
+ (color-theme-solarized-light . 11)
+ (make-face . 1)
+ (c++-mode . 2)
+ (compile . 39)
+ (comment-box . 5)
+ (recompile . 18)
+ (comment-dwim . 3)
+ (color-theme-solarized-dark . 6)
+ (dired . 7)
+ (makefile-mode . 1)
+ (rename-file . 2)
+ (recover-file . 1)
+ (org-list-make-subtree . 1)
+ (org-list-insert-radio-list . 2)
+ (color-theme-hober . 1)
+ (make-directory . 1)
+ (replace-string . 4)
+ (package-list-packages . 1)
+ (rst-mode . 2)
+ (regexp-builder . 1)
+ (color-theme-charcoal-black . 1)
+)
