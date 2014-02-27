@@ -1,6 +1,5 @@
+;require common lisp
 (require 'cl)
-
-(global-linum-mode t)
 
 (require 'package)
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
@@ -54,10 +53,15 @@
                  (dolist (package not-installed)
                    (package-install package))))))
 
+
+;;global line number mode - puts line numbers on the left
+(global-linum-mode t)
+
+
 ;;undo-tree mode
 (add-hook 'after-init-hook 'global-undo-tree-mode) 
 
-;;monospaced 
+;;monospaced font
 (if (equal (display-graphic-p) 'false) (set-default-font "Inconsolata-12")
 )
 
@@ -90,6 +94,9 @@
 (color-theme-solarized-dark)
 
 ;;python-mode indentation
+;;this is a matter of taste, when I hit ENTR and I'm in a method I
+;;want the level of indentation to be preserved rather than having to
+;;hit TAB agian.
 (add-hook 'python-mode-hook
           (lambda ()
              (define-key python-mode-map "\r" 'newline-and-indent)))
