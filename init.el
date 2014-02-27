@@ -61,11 +61,11 @@
 ;;undo-tree mode
 (add-hook 'after-init-hook 'global-undo-tree-mode) 
 
-;;monospaced font
-(if (equal (display-graphic-p) 'false) (set-default-font "Inconsolata-12")
-)
+;;monospaced font - Inconsolata should be installed if not available
+(set-default-font "Inconsolata-13")
 
-(setq initial-scratch-message "") ;;get rid of annoying scratch message
+;;get rid of annoying scratch message
+(setq initial-scratch-message "")
 
 ;;auto-complete
 (require 'auto-complete-config)
@@ -94,9 +94,9 @@
 (color-theme-solarized-dark)
 
 ;;python-mode indentation
-;;this is a matter of taste, when I hit ENTR and I'm in a method I
+;;this is a matter of taste, when I hit ENTER and I'm in a method I
 ;;want the level of indentation to be preserved rather than having to
 ;;hit TAB agian.
 (add-hook 'python-mode-hook
           (lambda ()
-             (define-key python-mode-map "\r" 'newline-and-indent)))
+            (define-key python-mode-map "\r" 'newline-and-indent)))
