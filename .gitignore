@@ -5,6 +5,7 @@ backups/*
 places/* 
 auto-save-list/*
 session*
+auto-save-list
 auto-save-listplaces
 places
 .*

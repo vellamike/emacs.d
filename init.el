@@ -1,5 +1,7 @@
 (require 'cl)
 
+(global-linum-mode t)
+
 (require 'package)
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
@@ -34,6 +36,7 @@
         rainbow-delimiters
         rainbow-mode
         smex
+        python-mode
         starter-kit
         undo-tree
         yasnippet
@@ -51,7 +54,8 @@
                  (dolist (package not-installed)
                    (package-install package))))))
 
-(add-hook 'after-init-hook 'global-undo-tree-mode) ;;undo-tree mode
+;;undo-tree mode
+(add-hook 'after-init-hook 'global-undo-tree-mode) 
 
 ;;monospaced 
 (if (equal (display-graphic-p) 'false) (set-default-font "Inconsolata-12")
@@ -63,26 +67,6 @@
 (require 'auto-complete-config)
 (ac-config-default)
 (global-auto-complete-mode t)
-
-;;python -disablinng these first three lines as I suspect they don't
-;;help much
-;(add-to-list 'load-path "~/.emacs.d/pymacs") ;;mv experiment
-;(pymacs-load "ropemacs" "rope-")
-;(setq ropemacs-enable-autoimport t)
-
-(setq
- python-shell-interpreter "ipython"
- python-shell-interpreter-args ""
- python-shell-prompt-regexp "In \\[[0-9]+\\]: "
- python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
- python-shell-completion-setup-code
-   "from IPython.core.completerlib import module_completion"
- python-shell-completion-module-string-code
-   "';'.join(module_completion('''%s'''))\n"
- python-shell-completion-string-code
-   "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
-;;get python indentation right: - MV temporarily canceled this to see what effect would be
-;;(add-hook 'python-mode-hook '(lambda () (define-key python-mode-map "\C-m" 'ne;;wline-and-indent)))
 
 ;; enable yasnippet
 (yas-global-mode 1)
@@ -104,3 +88,8 @@
 ;;select color theme
 (color-theme-initialize)
 (color-theme-solarized-dark)
+
+;;python-mode indentation
+(add-hook 'python-mode-hook
+          (lambda ()
+             (define-key python-mode-map "\r" 'newline-and-indent)))
