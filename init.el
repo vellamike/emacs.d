@@ -1,5 +1,7 @@
 (require 'cl)
 
+(global-linum-mode t)
+
 (require 'package)
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
@@ -87,7 +89,7 @@
 (color-theme-initialize)
 (color-theme-solarized-dark)
 
-;;python-mode
+;;python-mode indentation
 (add-hook 'python-mode-hook
           (lambda ()
              (define-key python-mode-map "\r" 'newline-and-indent)))
