@@ -1,4 +1,4 @@
-*.dat
+ac-comphist.dat
 elpa/*
 backups/*
 places/* 
