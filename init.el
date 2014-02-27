@@ -2,9 +2,9 @@
 (require 'cl)
 
 (require 'package)
-(setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
+(setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
+                         ("ELPA" . "http://tromey.com/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("technomancy" . "http://repo.technomancy.us/emacs/")))
 
@@ -12,19 +12,15 @@
       '(ace-jump-mode
         anaphora
         autopair
-        bang
         cppcheck
         dart-mode
-        dynamic-fonts
         expand-region
         fill-column-indicator
         flex-autopair
         flymake-cursor
         flyspell-lazy
-        font-utils
         idle-highlight-mode
         ido-ubiquitous
-        jabber
         js2-mode
         key-chord
         list-utils
@@ -56,7 +52,6 @@
 ;;global line number mode - puts line numbers on the left
 (global-linum-mode t)
 
-
 ;;undo-tree mode
 (add-hook 'after-init-hook 'global-undo-tree-mode) 
 
@@ -77,19 +72,18 @@
 ;; Auto-Save on ^Z
 (add-hook 'suspend-hook 'do-auto-save)
 
-;;fullscreen
-(defun toggle-fullscreen ()
-  (interactive)
-  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
-  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
-)
-
-(if (eq window-system 'X) (toggle-fullscreen))
+;;fullscreen - disabled atm
+;;;;(defun toggle-fullscreen ()
+;;;;  (interactive)
+;;;;  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+;;;;	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
+;;;;  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+;;;;	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
+;;;;)
+;;;;(if (eq window-system 'X) (toggle-fullscreen))
 
 ;;select color theme
-(load-theme 'wombat t)
+(load-theme 'wombat)
 
 ;;python-mode indentation
 ;;this is a matter of taste, when I hit ENTER and I'm in a method I
@@ -98,15 +92,3 @@
 (add-hook 'python-mode-hook
           (lambda ()
             (define-key python-mode-map "\r" 'newline-and-indent)))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("0f0e3af1ec61d04ff92f238b165dbc6d2a7b4ade7ed9812b4ce6b075e08f49fe" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
