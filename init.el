@@ -140,13 +140,10 @@
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
   (tooltip-mode -1)
   (mouse-wheel-mode t)
-  (blink-cursor-mode -1))
+  (blink-cursor-mode -1)
+  (tool-bar-mode -1)
+  (menu-bar-mode -1))
 
-;get rid of toolbar
-(tool-bar-mode -1)
-
-;don't need a menu bar
-(menu-bar-mode -1)
 
 ;; can't do it at launch or emacsclient won't always honor it
 (add-hook 'before-make-frame-hook 'esk-turn-off-tool-bar)
@@ -154,6 +151,12 @@
 ;replace yes and no with y and n
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+
+;change window sizes
+(global-set-key (kbd "<C-up>") 'shrink-window)
+(global-set-key (kbd "<C-down>") 'enlarge-window)
+(global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
+(global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
