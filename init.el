@@ -20,7 +20,6 @@
         flymake-cursor
         flyspell-lazy
         idle-highlight-mode
-        ido-ubiquitous
         js2-mode
         key-chord
         list-utils
@@ -31,7 +30,9 @@
         rainbow-mode
         smex
         python-mode
-        starter-kit
+        magit
+        ido-ubiquitous
+        find-file-in-project
         undo-tree
         yasnippet
         pymacs
@@ -51,6 +52,17 @@
                    (package-install package))))))
 
 
+;;; Reverse colors for the border to have nicer line  
+(set-face-inverse-video-p 'vertical-border nil)
+(set-face-background 'vertical-border (face-background 'default))
+;
+;; Set symbol for the border
+(set-display-table-slot standard-display-table
+                        'vertical-border 
+                        (make-glyph-code ?┃))
+
+
+
 ;;global line number mode - puts line numbers on the left
 (global-linum-mode t)
 
@@ -59,6 +71,9 @@
 
 ;;monospaced font - Inconsolata should be installed if not available
 (set-default-font "Inconsolata-12")
+
+;get rid of emacs startup message
+(setq inhibit-startup-message t)
 
 ;;get rid of annoying scratch message
 (setq initial-scratch-message "")
@@ -74,15 +89,18 @@
 ;; Auto-Save on ^Z
 (add-hook 'suspend-hook 'do-auto-save)
 
-;;fullscreen - disabled atm
-;;;;(defun toggle-fullscreen ()
-;;;;  (interactive)
-;;;;  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-;;;;	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
-;;;;  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-;;;;	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
-;;;;)
-;;;;(if (eq window-system 'X) (toggle-fullscreen))
+;; remove scroll bars
+(scroll-bar-mode -1)
+
+;fullscreen - disabled atm
+;(defun toggle-fullscreen ()
+;  (interactive)
+;  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+;	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
+;  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+;	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
+;)
+;(if (eq window-system 'X) (toggle-fullscreen))
 
 ;;select color theme
 (load-theme 'solarized-dark t)
@@ -94,6 +112,48 @@
 (add-hook 'python-mode-hook
           (lambda ()
             (define-key python-mode-map "\r" 'newline-and-indent)))
+
+
+;; Highlight matching parentheses when the point is on them.
+(show-paren-mode 1)
+
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+;(setq smex-save-file "~/.emacs.d/smex-save-file")
+
+;; ido-mode is like magic pixie dust!
+(ido-mode t)
+(setq ido-enable-prefix nil
+      ido-enable-flex-matching t
+      ido-auto-merge-work-directories-length nil
+      ido-create-new-buffer 'always
+      ido-use-filename-at-point 'guess
+      ido-use-virtual-buffers t
+      ido-handle-duplicate-virtual-buffers 2
+      ido-max-prospects 10)
+
+(ido-ubiquitous-mode t)
+
+(when window-system
+  (setq frame-title-format '(buffer-file-name "%f" ("%b")))
+  (tooltip-mode -1)
+  (mouse-wheel-mode t)
+  (blink-cursor-mode -1))
+
+;get rid of toolbar
+(tool-bar-mode -1)
+
+;don't need a menu bar
+(menu-bar-mode -1)
+
+;; can't do it at launch or emacsclient won't always honor it
+(add-hook 'before-make-frame-hook 'esk-turn-off-tool-bar)
+
+;replace yes and no with y and n
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -107,5 +167,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-
