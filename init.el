@@ -139,9 +139,9 @@
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
   (tooltip-mode -1)
   (mouse-wheel-mode t)
-  (blink-cursor-mode -1)
+  (blink-cursor-mode t)
   (tool-bar-mode -1)
-  (menu-bar-mode -1))
+  (menu-bar-mode t))
 
 ;thin cursor
 (setq-default cursor-type 'bar) 
