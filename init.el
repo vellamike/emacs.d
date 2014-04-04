@@ -141,7 +141,7 @@
   (mouse-wheel-mode t)
   (blink-cursor-mode t)
   (tool-bar-mode -1)
-  (menu-bar-mode f))
+  (menu-bar-mode -1))
 
 ;thin cursor
 (setq-default cursor-type 'bar) 
