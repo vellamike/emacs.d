@@ -92,16 +92,6 @@
 ;; remove scroll bars
 (scroll-bar-mode -1)
 
-;fullscreen - disabled atm
-;(defun toggle-fullscreen ()
-;  (interactive)
-;  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-;	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
-;  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-;	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
-;)
-;(if (eq window-system 'X) (toggle-fullscreen))
-
 ;;select color theme
 (load-theme 'wombat t)
 
@@ -152,6 +142,16 @@
 ;replace yes and no with y and n
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;fullscreen
+(defun toggle-fullscreen ()
+  "Toggle full screen on X11"
+  (interactive)
+  (when (eq window-system 'x)
+    (set-frame-parameter
+     nil 'fullscreen
+     (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
+
+(global-set-key [f11] 'toggle-fullscreen)
 
 ;change window sizes
 (global-set-key (kbd "<C-up>") 'shrink-window)
