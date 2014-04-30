@@ -15,3 +15,6 @@ places
 newsticker/*
 /ede-projects.el
 /init.el.before_ecb_2.40
+/eshell/history
+/eshell/lastdir
+/url/cookies
