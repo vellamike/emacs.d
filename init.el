@@ -98,6 +98,9 @@
 ;;select color theme
 (load-theme 'wombat t)
 
+;;change cursor colour, I find it easier to spot this way
+(set-cursor-color "red")
+
 ;;python-mode indentation
 ;;this is a matter of taste, when I hit ENTER and I'm in a method I
 ;;want the level of indentation to be preserved rather than having to
