@@ -13,3 +13,6 @@ auto-save-listplaces
 places
 .*
 newsticker/*
+/eshell/history
+/eshell/lastdir
+/url/cookies
