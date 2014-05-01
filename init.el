@@ -54,6 +54,11 @@
                    (package-install package))))))
 
 
+;;Display time and date in emacs status bar
+(setq display-time-day-and-date t
+   display-time-24hr-format t)
+(display-time)
+
 ;;; Reverse colors for the border to have nicer line  
 (set-face-inverse-video-p 'vertical-border nil)
 (set-face-background 'vertical-border (face-background 'default))
@@ -166,9 +171,10 @@
      nil 'fullscreen
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
+;toggle full screen with F11 key
 (global-set-key [f11] 'toggle-fullscreen)
 
-;change window sizes
+;change window sizes using arrow keys
 (global-set-key (kbd "<C-up>") 'shrink-window)
 (global-set-key (kbd "<C-down>") 'enlarge-window)
 (global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
