@@ -77,7 +77,9 @@
 (add-hook 'after-init-hook 'global-undo-tree-mode) 
 
 ;;monospaced font - Inconsolata should be installed if not available
-(set-default-font "Inconsolata-12")
+(condition-case nil
+    (set-default-font "Inconsolata-12")
+  (error nil))
 
 ;get rid of emacs startup message
 (setq inhibit-startup-message t)
