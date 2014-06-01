@@ -41,6 +41,7 @@
         zenburn-theme
 	auctex
 	auto-complete-auctex
+	jedi
         ))
 
 (package-initialize)
@@ -117,7 +118,9 @@
 ;;change cursor colour, I find it easier to spot this way
 (set-cursor-color "red")
 
-;;python-mode indentation
+;;python-mode 
+
+;;indentation
 ;;this is a matter of taste, when I hit ENTER and I'm in a method I
 ;;want the level of indentation to be preserved rather than having to
 ;;hit TAB agian.
@@ -125,10 +128,16 @@
           (lambda ()
             (define-key python-mode-map "\r" 'newline-and-indent)))
 
+;;jedi -- autocomplete for Python
+(autoload 'jedi:setup "jedi" nil t)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:setup-keys t)
+(setq jedi:complete-on-dot t)
 
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode 1)
 
+;;Smex is a M-x enhancement for Emacs. Built on top of IDO, it provides a convenient interface to your recently and most frequently used commands. And to all the other commands, too.
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
