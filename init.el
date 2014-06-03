@@ -42,6 +42,8 @@
 	auctex
 	auto-complete-auctex
 	jedi
+	markdown-mode
+	powerline
         ))
 
 (package-initialize)
@@ -102,7 +104,8 @@
 
 ;; remove scroll bars
 (scroll-bar-mode -1)
-
+(tool-bar-mode -1)
+(menu-bar-mode -1)
 
 ;;select color theme, also disable all themes before loading
 (defun disable-all-themes ()
@@ -170,6 +173,15 @@
 (global-set-key (kbd "C-c <down>")  'windmove-down)
 
 
+
+;;linenum mode prevents doc view mode from working properly
+(add-hook 'doc-view-mode-hook
+  (lambda ()
+    (linum-mode -1)
+  ))
+
+
+
 ;thin cursor
 (setq-default cursor-type 'bar) 
 
@@ -187,6 +199,9 @@
     (set-frame-parameter
      nil 'fullscreen
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
+
+;fancy status line
+(powerline-default-theme)
 
 ;toggle full screen with F11 key
 (global-set-key [f11] 'toggle-fullscreen)
