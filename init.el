@@ -36,11 +36,13 @@
         undo-tree
         yasnippet
         pymacs
-        auto-complete
+	neotree
+        ;;auto-complete
+	company
         solarized-theme
         zenburn-theme
 	auctex
-	auto-complete-auctex
+	;;auto-complete-auctex
 	jedi
 	markdown-mode
 	powerline
@@ -72,6 +74,11 @@
                         (make-glyph-code ?┃))
 
 
+;;
+;; Autocomplete
+;;
+(global-company-mode)
+(setq company-idle-delay 0) ;; No delay
 
 ;;global line number mode - puts line numbers on the left
 (global-linum-mode t)
@@ -90,14 +97,16 @@
 ;;get rid of annoying scratch message
 (setq initial-scratch-message "")
 
-;;auto-complete
-(require 'auto-complete-config)
-(ac-config-default)
-(global-auto-complete-mode t)
-(add-to-list 'ac-modes 'latex-mode)
+;;;;auto-complete
+;;(require 'auto-complete-config)
+;;(ac-config-default)
+;;(global-auto-complete-mode t)
+;;(add-to-list 'ac-modes 'latex-mode)
 
 ;; enable yasnippet
-(yas-global-mode 1)
+;;(yas-global-mode 1)
+
+
 
 ;; Auto-Save on ^Z
 (add-hook 'suspend-hook 'do-auto-save)
@@ -121,6 +130,7 @@
 ;;change cursor colour, I find it easier to spot this way
 (set-cursor-color "red")
 
+
 ;;python-mode 
 
 ;;indentation
@@ -131,11 +141,16 @@
           (lambda ()
             (define-key python-mode-map "\r" 'newline-and-indent)))
 
-;;jedi -- autocomplete for Python
-(autoload 'jedi:setup "jedi" nil t)
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:setup-keys t)
-(setq jedi:complete-on-dot t)
+;;;;jedi -- autocomplete for Python
+;;(autoload 'jedi:setup "jedi" nil t)
+;;(add-hook 'python-mode-hook 'jedi:setup)
+;;(setq jedi:setup-keys t)
+;;(setq jedi:complete-on-dot t)
+
+(defun my/python-mode-hook ()
+  (add-to-list 'company-backends 'company-jedi))
+
+(add-hook 'python-mode-hook 'my/python-mode-hook)
 
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode 1)
@@ -179,6 +194,12 @@
   (lambda ()
     (linum-mode -1)
   ))
+
+
+;;
+;; emacs server
+;;
+(server-start)
 
 
 
