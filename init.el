@@ -5,14 +5,14 @@
 (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
                          ("ELPA" . "http://tromey.com/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("technomancy" . "http://repo.technomancy.us/emacs/")))
+                         ;;("technomancy" . "http://repo.technomancy.us/emacs/")
+			 ))
 
 (setq ash-packages
       '(ace-jump-mode
         anaphora
         autopair
-        cppcheck
+        cppcheck ;;does this work?
         dart-mode
         expand-region
         fill-column-indicator
@@ -36,9 +36,9 @@
         undo-tree
         yasnippet
         pymacs
-	neotree
-        ;;auto-complete
-	company
+		neotree
+        ;;auto-complete ;;disabled - not obviously better than company-mode
+		company
         solarized-theme
         zenburn-theme
 	auctex
@@ -46,6 +46,7 @@
 	jedi
 	markdown-mode
 	powerline
+	lorem-ipsum
         ))
 
 (package-initialize)
@@ -64,13 +65,13 @@
    display-time-24hr-format t)
 (display-time)
 
-;;; Reverse colors for the border to have nicer line  
+;;; Reverse colors for the border to have nicer line
 (set-face-inverse-video-p 'vertical-border nil)
 (set-face-background 'vertical-border (face-background 'default))
 ;
 ;; Set symbol for the border
 (set-display-table-slot standard-display-table
-                        'vertical-border 
+                        'vertical-border
                         (make-glyph-code ?┃))
 
 
@@ -80,11 +81,18 @@
 (global-company-mode)
 (setq company-idle-delay 0) ;; No delay
 
+;;auto revert mode
+(global-auto-revert-mode 1)
+
 ;;global line number mode - puts line numbers on the left
 (global-linum-mode t)
 
 ;;undo-tree mode
-(add-hook 'after-init-hook 'global-undo-tree-mode) 
+(add-hook 'after-init-hook 'global-undo-tree-mode)
+
+;;flycheck mode
+(add-hook 'after-init-hook #'global-flycheck-mode)
+(setq flycheck-flake8-maximum-line-length 120)
 
 ;;monospaced font - Inconsolata should be installed if not available
 (condition-case nil
@@ -131,7 +139,7 @@
 (set-cursor-color "red")
 
 
-;;python-mode 
+;;python-mode
 
 ;;indentation
 ;;this is a matter of taste, when I hit ENTER and I'm in a method I
@@ -204,7 +212,7 @@
 
 
 ;thin cursor
-(setq-default cursor-type 'bar) 
+(setq-default cursor-type 'bar)
 
 ;; can't do it at launch or emacsclient won't always honor it
 (add-hook 'before-make-frame-hook 'esk-turn-off-tool-bar)
@@ -232,6 +240,8 @@
 (global-set-key (kbd "<C-down>") 'enlarge-window)
 (global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
 (global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
+(global-set-key [f5] 'goto-line)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -255,3 +265,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'narrow-to-region 'disabled nil)
+
+(put 'downcase-region 'disabled nil)
