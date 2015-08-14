@@ -12,7 +12,6 @@
       '(ace-jump-mode
         anaphora
         autopair
-        cppcheck ;;does this work?
         dart-mode
         expand-region
         fill-column-indicator
@@ -35,18 +34,16 @@
         find-file-in-project
         undo-tree
         yasnippet
-        pymacs
-		neotree
-        ;;auto-complete ;;disabled - not obviously better than company-mode
-		company
+	neotree
+	company
         solarized-theme
         zenburn-theme
 	auctex
-	;;auto-complete-auctex
 	jedi
 	markdown-mode
 	powerline
 	lorem-ipsum
+	irony
         ))
 
 (package-initialize)
@@ -75,11 +72,34 @@
                         (make-glyph-code ?┃))
 
 
+(require 'semantic)
+;;(global-semanticdb-minor-mode 1)
+(global-semantic-idle-scheduler-mode 0) ;; doesnt seem to be working
+(semantic-mode 0) ;;
+
+
 ;;
-;; Autocomplete
+;; Autocomplete with company mode and irony mode for C++
+;; irony mode requires you to install the irony-server
 ;;
 (global-company-mode)
 (setq company-idle-delay 0) ;; No delay
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+;; replace the `completion-at-point' and `complete-symbol' bindings in
+;; irony-mode's buffers by irony-mode's function
+(defun my-irony-mode-hook ()
+  (define-key irony-mode-map [remap completion-at-point]
+    'irony-completion-at-point-async)
+  (define-key irony-mode-map [remap complete-symbol]
+    'irony-completion-at-point-async))
+(add-hook 'irony-mode-hook 'my-irony-mode-hook)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'company-irony))
+
 
 ;;auto revert mode
 (global-auto-revert-mode 1)
@@ -202,14 +222,6 @@
   (lambda ()
     (linum-mode -1)
   ))
-
-
-;;
-;; emacs server
-;;
-(server-start)
-
-
 
 ;thin cursor
 (setq-default cursor-type 'bar)
