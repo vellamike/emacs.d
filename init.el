@@ -71,18 +71,8 @@
                         'vertical-border
                         (make-glyph-code ?┃))
 
-
-;; Semantic mode didn't seem to work very well - leaving out for now
-;;(require 'semantic)
-;;;;(global-semanticdb-minor-mode 1)
-;;(global-semantic-idle-scheduler-mode 0) ;; doesnt seem to be working
-;;(semantic-mode 0) ;;
-
-
-;;
 ;; Autocomplete with company mode and irony mode for C++
 ;; irony mode requires you to install the irony-server
-;;
 (global-company-mode)
 (setq company-idle-delay 0) ;; No delay
 (add-hook 'c++-mode-hook 'irony-mode)
@@ -116,6 +106,7 @@
   '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 ;;flake 8 needs to be installed via "Pip install flake8 - this gives you sophisticated python syntax checking"
 (setq flycheck-flake8-maximum-line-length 120)
+
 ;;monospaced font - Inconsolata should be installed if not available
 (condition-case nil
     (set-default-font "Inconsolata-12")
@@ -152,17 +143,6 @@
 ;;change cursor colour, I find it easier to spot this way
 (set-cursor-color "red")
 
-
-;;python-mode
-
-;;indentation
-;;this is a matter of taste, when I hit ENTER and I'm in a method I
-;;want the level of indentation to be preserved rather than having to
-;;hit TAB agian.
-;;(add-hook 'python-mode-hook
-;;          (lambda ()
-;;            (define-key python-mode-map "\r" 'newline-and-indent)))
-
 ;;;;jedi -- autocomplete for Python - I use company mode not AC (the Jedi default)
 (defun my/python-mode-hook ()
   (add-to-list 'company-backends 'company-jedi))
@@ -171,7 +151,9 @@
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode 1)
 
-;;Smex is a M-x enhancement for Emacs. Built on top of IDO, it provides a convenient interface to your recently and most frequently used commands. And to all the other commands, too.
+;;Smex is a M-x enhancement for Emacs.
+;;Built on top of IDO, it provides a convenient interface to your recently and most frequently used commands.
+;;And to all the other commands, too.
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
@@ -198,12 +180,11 @@
   (tool-bar-mode -1)
   (menu-bar-mode -1))
 
+;;Window manipulation
 (global-set-key (kbd "C-c <left>")  'windmove-left)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
-
-
 
 ;;linenum mode prevents doc view mode from working properly
 (add-hook 'doc-view-mode-hook
