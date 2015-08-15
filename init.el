@@ -130,8 +130,6 @@
 ;; enable yasnippet
 (yas-global-mode 1)
 
-
-
 ;; Auto-Save on ^Z
 (add-hook 'suspend-hook 'do-auto-save)
 
@@ -161,9 +159,9 @@
 ;;this is a matter of taste, when I hit ENTER and I'm in a method I
 ;;want the level of indentation to be preserved rather than having to
 ;;hit TAB agian.
-(add-hook 'python-mode-hook
-          (lambda ()
-            (define-key python-mode-map "\r" 'newline-and-indent)))
+;;(add-hook 'python-mode-hook
+;;          (lambda ()
+;;            (define-key python-mode-map "\r" 'newline-and-indent)))
 
 ;;;;jedi -- autocomplete for Python - I use company mode not AC (the Jedi default)
 (defun my/python-mode-hook ()
