@@ -1,13 +1,11 @@
+;;; Mike Vella's init.el file
 ;require common lisp
 (require 'cl)
 
 (require 'package)
 (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
                          ("ELPA" . "http://tromey.com/elpa/")
-                         ("gnu" . "http://elpa.gnu.org/packages/")
-                         ;;("technomancy" . "http://repo.technomancy.us/emacs/")
-			 ))
-
+                         ("gnu" . "http://elpa.gnu.org/packages/")))
 (setq ash-packages
       '(ace-jump-mode
         anaphora
@@ -16,6 +14,7 @@
         expand-region
         fill-column-indicator
         flex-autopair
+	flycheck-irony
         flymake-cursor
         flyspell-lazy
         idle-highlight-mode
@@ -36,6 +35,7 @@
         yasnippet
 	neotree
 	company
+	company-jedi
         solarized-theme
         zenburn-theme
 	auctex
@@ -72,10 +72,11 @@
                         (make-glyph-code ?┃))
 
 
-(require 'semantic)
-;;(global-semanticdb-minor-mode 1)
-(global-semantic-idle-scheduler-mode 0) ;; doesnt seem to be working
-(semantic-mode 0) ;;
+;; Semantic mode didn't seem to work very well - leaving out for now
+;;(require 'semantic)
+;;;;(global-semanticdb-minor-mode 1)
+;;(global-semantic-idle-scheduler-mode 0) ;; doesnt seem to be working
+;;(semantic-mode 0) ;;
 
 
 ;;
@@ -96,12 +97,11 @@
     'irony-completion-at-point-async))
 (add-hook 'irony-mode-hook 'my-irony-mode-hook)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-
 (eval-after-load 'company
   '(add-to-list 'company-backends 'company-irony))
 
 
-;;auto revert mode
+;;auto revert mode  - if file changes (e.g by an external process) revert the buffer
 (global-auto-revert-mode 1)
 
 ;;global line number mode - puts line numbers on the left
@@ -112,8 +112,10 @@
 
 ;;flycheck mode
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
+;;flake 8 needs to be installed via "Pip install flake8 - this gives you sophisticated python syntax checking"
 (setq flycheck-flake8-maximum-line-length 120)
-
 ;;monospaced font - Inconsolata should be installed if not available
 (condition-case nil
     (set-default-font "Inconsolata-12")
@@ -125,14 +127,8 @@
 ;;get rid of annoying scratch message
 (setq initial-scratch-message "")
 
-;;;;auto-complete
-;;(require 'auto-complete-config)
-;;(ac-config-default)
-;;(global-auto-complete-mode t)
-;;(add-to-list 'ac-modes 'latex-mode)
-
 ;; enable yasnippet
-;;(yas-global-mode 1)
+(yas-global-mode 1)
 
 
 
@@ -169,15 +165,9 @@
           (lambda ()
             (define-key python-mode-map "\r" 'newline-and-indent)))
 
-;;;;jedi -- autocomplete for Python
-;;(autoload 'jedi:setup "jedi" nil t)
-;;(add-hook 'python-mode-hook 'jedi:setup)
-;;(setq jedi:setup-keys t)
-;;(setq jedi:complete-on-dot t)
-
+;;;;jedi -- autocomplete for Python - I use company mode not AC (the Jedi default)
 (defun my/python-mode-hook ()
   (add-to-list 'company-backends 'company-jedi))
-
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 
 ;; Highlight matching parentheses when the point is on them.
