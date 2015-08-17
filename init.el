@@ -36,6 +36,7 @@
 	neotree
 	company
 	company-jedi
+	company-irony
         solarized-theme
         zenburn-theme
 	auctex
