@@ -63,6 +63,11 @@
    display-time-24hr-format t)
 (display-time)
 
+;;Adding to PATH
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+    (setq exec-path (append exec-path '("/usr/local/bin")))
+
+
 ;;; Reverse colors for the border to have nicer line
 (set-face-inverse-video-p 'vertical-border nil)
 (set-face-background 'vertical-border (face-background 'default))
