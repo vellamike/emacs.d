@@ -51,9 +51,11 @@
 
 (package-initialize)
 
-;; for go mode the following is needed@
+;; for go mode the following is needed, or makes it much better
 ;; go get -u github.com/dougm/goflymake
 ;; go get -u github.com/nsf/gocode
+;; go get github.com/rogpeppe/godef
+
 
 (add-hook 'go-mode-hook (lambda ()
                           (set (make-local-variable 'company-backends) '(company-go))
@@ -77,7 +79,7 @@
    display-time-24hr-format t)
 (display-time)
 
-(setenv "GOPATH" "~/dev/go/")
+(setenv "GOPATH" (concat (getenv "HOME") "/dev/go"))
 (setenv "PATH" (concat (getenv "PATH") ":~/dev/go/bin"))
 ;;Adding to PATH
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
