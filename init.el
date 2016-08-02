@@ -45,7 +45,14 @@
 	powerline
 	lorem-ipsum
 	irony
+	go-mode
+	company-go
         ))
+
+
+(add-hook 'go-mode-hook (lambda ()
+                          (set (make-local-variable 'company-backends) '(company-go))
+                          (company-mode)))
 
 (package-initialize)
 ;;; install missing packages
@@ -63,10 +70,13 @@
    display-time-24hr-format t)
 (display-time)
 
+(setenv "GOPATH" "~/dev/go/")
+(setenv "PATH" (concat (getenv "PATH") ":~/dev/go/bin"))
 ;;Adding to PATH
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
-    (setq exec-path (append exec-path '("/usr/local/bin")))
-
+(setq exec-path (append exec-path '("/usr/local/bin")))
+(setq exec-path (append exec-path '("/usr/local/go/bin")))
+(setq exec-path (append exec-path '("~/dev/go/bin")))
 
 ;;; Reverse colors for the border to have nicer line
 (set-face-inverse-video-p 'vertical-border nil)
