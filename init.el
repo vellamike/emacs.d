@@ -49,12 +49,19 @@
 	company-go
         ))
 
+(package-initialize)
+
+;; for go mode the following is needed@
+;; go get -u github.com/dougm/goflymake
+;; go get -u github.com/nsf/gocode
 
 (add-hook 'go-mode-hook (lambda ()
                           (set (make-local-variable 'company-backends) '(company-go))
-                          (company-mode)))
+			  (company-mode)))
 
-(package-initialize)
+(add-to-list 'load-path "~/dev/go/src/github.com/dougm/goflymake")
+(require 'go-flymake)
+
 ;;; install missing packages
 (let ((not-installed (remove-if 'package-installed-p ash-packages)))
   (if not-installed
