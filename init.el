@@ -46,23 +46,11 @@
 	lorem-ipsum
 	irony
 	go-mode
+	yaml-mode
 	company-go
         ))
 
 (package-initialize)
-
-;; for go mode the following is needed, or makes it much better
-;; go get -u github.com/dougm/goflymake
-;; go get -u github.com/nsf/gocode
-;; go get github.com/rogpeppe/godef
-
-
-(add-hook 'go-mode-hook (lambda ()
-                          (set (make-local-variable 'company-backends) '(company-go))
-			  (company-mode)))
-
-(add-to-list 'load-path "~/dev/go/src/github.com/dougm/goflymake")
-(require 'go-flymake)
 
 ;;; install missing packages
 (let ((not-installed (remove-if 'package-installed-p ash-packages)))
@@ -74,10 +62,19 @@
                    (package-install package))))))
 
 
-;;Display time and date in emacs status bar
-(setq display-time-day-and-date t
-   display-time-24hr-format t)
-(display-time)
+;; GOLANG MODE configuration
+;; for go mode the following is needed, or makes it much better
+;; go get -u github.com/dougm/goflymake
+;; go get -u github.com/nsf/gocode
+;; go get github.com/rogpeppe/godef
+
+
+(add-hook 'go-mode-hook (lambda ()
+                          (set (make-local-variable 'company-backends) '(company-go))
+			  (company-mode)))
+
+;;(add-to-list 'load-path "~/dev/go/src/github.com/dougm/goflymake")
+;;(require 'go-flymake)
 
 (setenv "GOPATH" (concat (getenv "HOME") "/dev/go"))
 (setenv "PATH" (concat (getenv "PATH") ":~/dev/go/bin"))
@@ -86,6 +83,12 @@
 (setq exec-path (append exec-path '("/usr/local/bin")))
 (setq exec-path (append exec-path '("/usr/local/go/bin")))
 (setq exec-path (append exec-path '("~/dev/go/bin")))
+
+
+;;Display time and date in emacs status bar
+(setq display-time-day-and-date t
+   display-time-24hr-format t)
+(display-time)
 
 ;;; Reverse colors for the border to have nicer line
 (set-face-inverse-video-p 'vertical-border nil)
@@ -143,8 +146,9 @@
 ;;get rid of annoying scratch message
 (setq initial-scratch-message "")
 
-;; enable yasnippet
+;; enable yasnippet - never really got it to work..
 (yas-global-mode 1)
+
 
 ;; Auto-Save on ^Z
 (add-hook 'suspend-hook 'do-auto-save)
