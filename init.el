@@ -48,6 +48,7 @@
 	go-mode
 	yaml-mode
 	company-go
+	handlebars-mode
         ))
 
 (package-initialize)
