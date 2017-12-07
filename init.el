@@ -47,6 +47,8 @@
 	yaml-mode
 	company-go
 	handlebars-mode
+	tern
+	company-tern
         ))
 
 (package-initialize)
@@ -59,6 +61,13 @@
           (progn (package-refresh-contents)
                  (dolist (package not-installed)
                    (package-install package))))))
+
+
+;; Javascript
+;; you probably want to install tern (npm install -g tern)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-hook 'js2-mode-hook 'tern-mode)
+(add-hook 'js2-mode-hook '(lambda () (setq-local company-backends '((company-tern :with company-yasnippet)))))
 
 
 ;; GOLANG MODE configuration
