@@ -141,6 +141,7 @@
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 ;;flake 8 needs to be installed via "Pip install flake8 - this gives you sophisticated python syntax checking"
+(setq flycheck-python-flake8-executable "python3")
 (setq flycheck-flake8-maximum-line-length 120)
 
 ;;monospaced font - Inconsolata should be installed if not available
