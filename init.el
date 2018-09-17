@@ -27,14 +27,12 @@
         rainbow-delimiters
         rainbow-mode
         smex
-        python-mode
         magit
         ido-ubiquitous
         find-file-in-project
         undo-tree
         yasnippet
 	neotree
-	company
 	company-jedi
 	company-irony
         solarized-theme
@@ -49,6 +47,8 @@
 	yaml-mode
 	company-go
 	handlebars-mode
+	tern
+	company-tern
         ))
 
 (package-initialize)
@@ -64,6 +64,13 @@
           (progn (package-refresh-contents)
                  (dolist (package not-installed)
                    (package-install package))))))
+
+
+;; Javascript
+;; you probably want to install tern (npm install -g tern)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-hook 'js2-mode-hook 'tern-mode)
+(add-hook 'js2-mode-hook '(lambda () (setq-local company-backends '((company-tern :with company-yasnippet)))))
 
 
 ;; GOLANG MODE configuration
@@ -137,6 +144,7 @@
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 ;;flake 8 needs to be installed via "Pip install flake8 - this gives you sophisticated python syntax checking"
+(setq flycheck-python-flake8-executable "python3")
 (setq flycheck-flake8-maximum-line-length 120)
 
 ;;monospaced font - Inconsolata should be installed if not available
@@ -282,6 +290,9 @@
      ("#93115C" . 85)
      ("#073642" . 100))))
  '(magit-diff-use-overlays nil)
+ '(package-selected-packages
+   (quote
+    (handlebars-mode company-go yaml-mode go-mode irony lorem-ipsum powerline markdown-mode jedi auctex zenburn-theme solarized-theme company-irony company-jedi neotree yasnippet undo-tree find-file-in-project ido-ubiquitous smex rainbow-mode rainbow-delimiters paredit oauth2 magit list-utils key-chord js2-mode idle-highlight-mode flyspell-lazy flymake-cursor flycheck-irony flex-autopair fill-column-indicator expand-region dart-mode autopair anaphora ace-jump-mode)))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
    (quote
