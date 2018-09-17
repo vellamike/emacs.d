@@ -53,6 +53,9 @@
 
 (package-initialize)
 
+;;; stop emacs backup files from going in the same directory as the files themselves
+(setq backup-directory-alist `(("." . "~/.saves")))
+
 ;;; install missing packages
 (let ((not-installed (remove-if 'package-installed-p ash-packages)))
   (if not-installed
