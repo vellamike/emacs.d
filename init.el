@@ -28,7 +28,7 @@
         rainbow-mode
         smex
         magit
-        ido-ubiquitous
+        ido-completing-read+
         find-file-in-project
         undo-tree
         yasnippet
@@ -52,6 +52,9 @@
         ))
 
 (package-initialize)
+
+(persistent-scratch-setup-default)
+(persistent-scratch-autosave-mode 1)
 
 ;;; stop emacs backup files from going in the same directory as the files themselves
 (setq backup-directory-alist `(("." . "~/.saves")))
@@ -292,7 +295,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (handlebars-mode company-go yaml-mode go-mode irony lorem-ipsum powerline markdown-mode jedi auctex zenburn-theme solarized-theme company-irony company-jedi neotree yasnippet undo-tree find-file-in-project ido-ubiquitous smex rainbow-mode rainbow-delimiters paredit oauth2 magit list-utils key-chord js2-mode idle-highlight-mode flyspell-lazy flymake-cursor flycheck-irony flex-autopair fill-column-indicator expand-region dart-mode autopair anaphora ace-jump-mode)))
+    (persistent-scratch handlebars-mode company-go yaml-mode go-mode irony lorem-ipsum powerline markdown-mode jedi auctex zenburn-theme solarized-theme company-irony company-jedi neotree yasnippet undo-tree find-file-in-project ido-completing-read+ smex rainbow-mode rainbow-delimiters paredit oauth2 magit list-utils key-chord js2-mode idle-highlight-mode flyspell-lazy flymake-cursor flycheck-irony flex-autopair fill-column-indicator expand-region dart-mode autopair anaphora ace-jump-mode)))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
    (quote
