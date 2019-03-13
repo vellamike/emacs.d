@@ -14,7 +14,7 @@
         expand-region
         fill-column-indicator
         flex-autopair
-	flycheck-irony
+        flycheck-irony
         flymake-cursor
         flyspell-lazy
         idle-highlight-mode
@@ -24,6 +24,7 @@
         magit
         oauth2
         paredit
+        persistent-scratch
         rainbow-delimiters
         rainbow-mode
         smex
@@ -32,29 +33,26 @@
         find-file-in-project
         undo-tree
         yasnippet
-	neotree
-	company-jedi
-	company-irony
+        neotree
+        company-jedi
+        company-irony
         solarized-theme
         zenburn-theme
-	auctex
-	jedi
-	markdown-mode
-	powerline
-	lorem-ipsum
-	irony
-	go-mode
-	yaml-mode
-	company-go
-	handlebars-mode
-	tern
-	company-tern
+        auctex
+        jedi
+        markdown-mode
+        powerline
+        lorem-ipsum
+        irony
+        go-mode
+        yaml-mode
+        company-go
+        handlebars-mode
+        tern
+        company-tern
         ))
 
 (package-initialize)
-
-(persistent-scratch-setup-default)
-(persistent-scratch-autosave-mode 1)
 
 ;;; stop emacs backup files from going in the same directory as the files themselves
 (setq backup-directory-alist `(("." . "~/.saves")))
@@ -68,6 +66,9 @@
                  (dolist (package not-installed)
                    (package-install package))))))
 
+;; Persistent scrtch
+(persistent-scratch-setup-default)
+(persistent-scratch-autosave-mode 1)
 
 ;; Javascript
 ;; you probably want to install tern (npm install -g tern)
