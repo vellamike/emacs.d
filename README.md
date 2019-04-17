@@ -9,5 +9,5 @@ pip3 install virtualenv
 pip3 install flake8
 M-x jedi:install-server
 sudo apt install cmake clang libclang-dev cppcheck
-M-X irony:install-server
+M-X irony-install-server
 ```
