@@ -3,9 +3,10 @@
 (require 'cl)
 
 (require 'package)
-(setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
-                         ("ELPA" . "http://tromey.com/elpa/")
-                         ("gnu" . "http://elpa.gnu.org/packages/")))
+(setq package-check-signature nil)
+(setq package-archives '(("melpa" . "https://melpa.milkbox.net/packages/")
+                         ("ELPA" . "https://tromey.com/elpa/")
+                         ("gnu" . "https://elpa.gnu.org/packages/")))
 (setq ash-packages
       '(ace-jump-mode
         anaphora
