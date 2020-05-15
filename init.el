@@ -50,7 +50,6 @@
         company-go
         handlebars-mode
         tern
-        company-tern
         ))
 
 (package-initialize)
