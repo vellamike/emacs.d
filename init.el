@@ -4,13 +4,12 @@
 
 (require 'package)
 (setq package-check-signature nil)
-(setq package-archives '(("melpa" . "https://melpa.milkbox.net/packages/")
+(setq package-archives '(("melpa" . "http://melpa.org/packages/")
                          ("ELPA" . "https://tromey.com/elpa/")
                          ("gnu" . "https://elpa.gnu.org/packages/")))
 (setq ash-packages
       '(ace-jump-mode
         anaphora
-        autopair
         dart-mode
         expand-region
         fill-column-indicator
@@ -170,9 +169,11 @@
 (add-hook 'suspend-hook 'do-auto-save)
 
 ;; remove scroll bars
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(menu-bar-mode -1)
+(if (display-graphic-p)
+    (progn
+      (tool-bar-mode -1)
+      (menu-bar-mode -1)
+      (scroll-bar-mode -1)))
 
 ;;select color theme, also disable all themes before loading
 (defun disable-all-themes ()
